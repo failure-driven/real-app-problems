@@ -14,14 +14,15 @@ git remote add heroku-${HEROKU_APP_NAME} \
 
 echo "Adding ruby build pack"
 heroku buildpacks
-if [[ $1 != '--create' ]] # NOTE: don't "remove" if run with --create flag
-then
+# TODO: make this work???
+# if [[ $1 != '--create' ]] # NOTE: don't "remove" if run with --create flag
+# then
   heroku buildpacks:remove \
     https://github.com/failure-driven/heroku-buildpack-monorepo \
     || echo "nodejs buildpack already removed"
   heroku buildpacks:remove heroku/ruby \
     || echo "ruby buildpack already removed"
-fi
+# fi
 heroku buildpacks:add \
   --app ${HEROKU_APP_NAME} \
   --index 1 https://github.com/failure-driven/heroku-buildpack-monorepo
