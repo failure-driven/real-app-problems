@@ -1,7 +1,5 @@
 # TODO
 
-- [x] rails new monorepo
-- [ ] rails deployable to heroku
 - [ ] linting setup (rubocop)
 - [ ] make file (dev, env) bin/setup
 - [ ] testing framework
@@ -12,5 +10,6 @@
 
 # DONE
 
-...
+- [x] rails new monorepo
+- [x] rails deployable to heroku
 

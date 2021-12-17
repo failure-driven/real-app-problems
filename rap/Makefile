@@ -13,6 +13,17 @@ NC      = \033[0m
 # versions
 APP_REVISION    = $(shell git rev-parse HEAD)
 
+.PHONY: build
+build: prettier
+
+.PHONY: prettier
+prettier:
+	bundle exec rubocop
+
+.PHONY: prettier-fix
+prettier-fix:
+	bundle exec rubocop --auto-correct
+
 .PHONY: db-migrate
 db-migrate:
 	bundle exec rails db:create db:migrate
@@ -31,6 +42,12 @@ usage:
 	@echo "Development"
 	@echo
 	@echo "${YELLOW}make db-migrate${NC}        migrate and confirm db/structure.sql"
+	@echo "${YELLOW}make prettier${NC}          run rubocop and linting rules"
+	@echo "${YELLOW}make prettier-fix${NC}      auto fix rubocop and linting exceptions"
+	@echo
+	@echo "Build"
+	@echo
+	@echo "${YELLOW}make build${NC}             run build"
 	@echo
 	@echo "Operations"
 	@echo

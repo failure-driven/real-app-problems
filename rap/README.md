@@ -6,6 +6,11 @@ bin/setup
 rails db:create db:migrate
 rails server
 open http://localhost:3000
+
+make prettier       # run rubocop
+make prettier-fix   # fix rubocop
+
+make build          # run build prior to pushing
 ```
 
 ## Original readme
