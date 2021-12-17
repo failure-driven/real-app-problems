@@ -8,6 +8,7 @@ apps.
 ```
 cd rap
 bundle
+bin/setup
 rails server
 open http://localhost:3000
 ```

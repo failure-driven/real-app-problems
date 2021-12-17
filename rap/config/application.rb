@@ -33,5 +33,8 @@ module Rap
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # to allow custom database types etc.
+    config.active_record.schema_format = :sql
   end
 end

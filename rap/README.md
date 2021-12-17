@@ -1,5 +1,15 @@
 # README
 
+```
+bundle
+bin/setup
+rails db:create db:migrate
+rails server
+open http://localhost:3000
+```
+
+## Original readme
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
