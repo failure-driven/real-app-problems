@@ -53,8 +53,11 @@ gem "tailwindcss-rails"
 
 group :test do
   gem "capybara"
+  gem "capybara-inline-screenshot"
   gem "rspec-example_steps"
   gem "rspec-rails"
+  gem "selenium-webdriver"
+  gem "webdrivers"
 end
 
 group :development, :test do

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "User tries out RAP" do
+RSpec.describe "User tries out RAP", :js do
   it "User visits RAP" do
     When "user visits the site" do
       visit root_path
