@@ -36,5 +36,10 @@ module Rap
 
     # to allow custom database types etc.
     config.active_record.schema_format = :sql
+
+    # use UUID by default for id's
+    config.generators do |g|
+      g.orm :active_record, primary_key_type: :uuid
+    end
   end
 end
