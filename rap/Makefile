@@ -15,6 +15,7 @@ APP_REVISION    = $(shell git rev-parse HEAD)
 
 .PHONY: build
 build: prettier
+	bundle exec rspec
 
 .PHONY: prettier
 prettier:
