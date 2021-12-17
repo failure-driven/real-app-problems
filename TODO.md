@@ -1,7 +1,6 @@
 # TODO
 
 - [ ] make file (dev, env) bin/setup
-- [ ] testing framework
 - [ ] CI
 - [ ] Feature flips
 - [ ] pre commit hooks ([husky?](https://github.com/typicode/husky))
@@ -9,6 +8,7 @@
 
 # DONE
 
+- [x] testing framework
 - [x] tailwindcss for styling
 - [x] linting setup (rubocop)
 - [x] rails new monorepo
