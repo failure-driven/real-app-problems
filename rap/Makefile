@@ -22,7 +22,7 @@ prettier:
 
 .PHONY: prettier-fix
 prettier-fix:
-	bundle exec rubocop --auto-correct
+	bundle exec rubocop --auto-correct-all
 
 .PHONY: db-migrate
 db-migrate:
