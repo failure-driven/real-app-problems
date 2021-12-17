@@ -173,6 +173,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.2)
       railties (>= 6.0.0)
+    tailwindcss-rails (1.0.0)
+      railties (>= 6.0.0)
     thor (1.1.0)
     turbo-rails (1.0.0)
       actionpack (>= 6.0.0)
@@ -210,6 +212,7 @@ DEPENDENCIES
   rubocop-rspec
   sprockets-rails
   stimulus-rails
+  tailwindcss-rails
   turbo-rails
   tzinfo-data
   web-console

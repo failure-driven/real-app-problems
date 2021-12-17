@@ -9,6 +9,7 @@
 
 # DONE
 
+- [x] tailwindcss for styling
 - [x] linting setup (rubocop)
 - [x] rails new monorepo
 - [x] rails deployable to heroku
