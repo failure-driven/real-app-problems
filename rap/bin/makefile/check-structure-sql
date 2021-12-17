@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+set -e
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+structure_sql_changed=$(git ls-files -m | grep db/structure.sql || echo "all good 👍")
+
+if [[ $structure_sql_changed = db/structure.sql ]]; then
+  echo -e "${RED}please resolve your uncommitted changes in structure.sql${NC}\n"
+  echo -e "${RED}  1) run 'make db-migrate' and${NC}\n"
+  echo -e "${RED}  2) add db/structure.sql generated to resolve this issue${NC}\n"
+  git --no-pager diff db/structure.sql
+  exit 1
+else
+  echo -e "${GREEN}structure.sql looks fine 🎉${NC}\n"
+fi
